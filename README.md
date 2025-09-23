@@ -1,2 +1,2 @@
-# ai-starter-cursor
+# starterkit-cursor
 Cursor starter kit for prototyping class
