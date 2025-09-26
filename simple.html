@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improv for Product Managers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --friends-yellow: #f6d64a;
+            --friends-blue: #4a84f6;
+            --friends-red: #e95555;
+            --friends-green: #51b36b;
+            --friends-purple: #7a5aa6;
+            --friends-bg: #faf7f2;
+        }
+
+        body {
+            background: var(--friends-bg);
+            font-family: 'Cabin', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .friends-title {
+            font-family: 'Poppins', 'Cabin', sans-serif;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+        }
+
+        .friends-dots span {
+            display: inline-block;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 9999px;
+            margin: 0 0.35rem;
+        }
+
+        .dot-yellow { background: var(--friends-yellow); }
+        .dot-blue { background: var(--friends-blue); }
+        .dot-red { background: var(--friends-red); }
+        .dot-green { background: var(--friends-green); }
+        .dot-purple { background: var(--friends-purple); }
+
+        .friends-card {
+            @apply rounded-2xl border border-neutral-200 bg-white shadow-sm;
+        }
+
+        .friends-link {
+            @apply text-neutral-800 underline decoration-dotted underline-offset-4 hover:text-neutral-950;
+        }
+
+        .btn {
+            @apply rounded-2xl border border-neutral-300 bg-white px-4 py-2 shadow-sm hover:shadow-md;
+        }
+
+        .page { display: none; }
+        .page.active { display: block; }
+    </style>
+</head>
+<body>
+    <header class="border-b border-neutral-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
+            <a href="#/" class="flex items-center gap-3">
+                <div class="friends-title text-2xl tracking-widest">IMPROV</div>
+                <div class="friends-dots" aria-hidden="true">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-blue"></span>
+                    <span class="dot-green"></span>
+                    <span class="dot-purple"></span>
+                </div>
+                <div class="friends-title text-2xl tracking-widest">PM</div>
+            </a>
+            <nav class="flex gap-6 text-sm">
+                <a href="#/outcomes" class="friends-link">Outcomes</a>
+                <a href="#/about" class="friends-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="home" class="page active">
+        <section class="mx-auto max-w-4xl px-4 py-10">
+            <div class="friends-card p-6">
+                <h1 class="friends-title text-3xl">Improv for Product Managers</h1>
+                <p class="mt-2 text-neutral-700">
+                    Use classic improv games and rules to facilitate key product management outcomes.
+                </p>
+                <div class="mt-6 flex gap-3">
+                    <a href="#/outcomes" class="btn">Explore Outcomes</a>
+                    <a href="#/about" class="btn">About</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="outcomes" class="page">
+        <section class="mx-auto max-w-4xl px-4 py-10">
+            <h2 class="friends-title text-2xl">Outcomes ↔ Improv</h2>
+            <p class="mt-2 text-neutral-700">Browse core PM deliverables and the improv tools that help.</p>
+
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                <article class="friends-card p-5">
+                    <h3 class="text-lg font-semibold">Manage a Backlog</h3>
+                    <p class="mt-1 text-sm text-neutral-700">Prioritize, refine, and create shared understanding of upcoming work.</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Yes, And</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Rule</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Build on each idea without negation; add constraints after expansion.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Encourages psychological safety and expands option space before prioritizing.</p>
+                        </li>
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Three Pillars Pitch</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Game</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Each person pitches a backlog item with three supporting reasons.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Forces clarity and comparable framing for prioritization discussions.</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="friends-card p-5">
+                    <h3 class="text-lg font-semibold">Manage Stakeholders</h3>
+                    <p class="mt-1 text-sm text-neutral-700">Align expectations, reveal concerns, and co-create next steps.</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Status Switch</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Exercise</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Roleplay the conversation switching high/low status to surface dynamics.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Builds empathy and strategies for navigating power and influence.</p>
+                        </li>
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Last Word</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Game</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">One person summarizes the other's point before adding their own.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Practices active listening and reduces defensive responses.</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="friends-card p-5">
+                    <h3 class="text-lg font-semibold">Create a Product Roadmap</h3>
+                    <p class="mt-1 text-sm text-neutral-700">Generate, shape, and sequence themes into a coherent story.</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Story Spine</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Structure</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Use Once upon a time → Every day → Until one day → ... → Ever since then.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Turns a set of features into a narrative arc stakeholders can follow.</p>
+                        </li>
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Hot Spotting</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Warm-up</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Quickly mark items that evoke energy or concern; cluster and label.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Surfaces signal for sequencing and risk planning.</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="friends-card p-5">
+                    <h3 class="text-lg font-semibold">Run Product Discovery</h3>
+                    <p class="mt-1 text-sm text-neutral-700">Explore opportunity space and test assumptions with users.</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Characters & Wants</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Exercise</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Define user-as-character, their want, obstacle, and tactics.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Centers user motivation and reveals unmet needs.</p>
+                        </li>
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">What Else?</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Rule</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">After each idea, ask "what else?" for one more beat.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Pushes beyond first-order ideas to novel options.</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="friends-card p-5">
+                    <h3 class="text-lg font-semibold">Facilitate a Retro</h3>
+                    <p class="mt-1 text-sm text-neutral-700">Reflect on process, celebrate wins, and agree on improvements.</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Gift-Giving</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Game</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Pair up and give each other imaginary gifts; explain why it fits.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Builds positivity and appreciation before harder conversations.</p>
+                        </li>
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">One-Minute Scenes</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Exercise</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Act out the sprint as a scene; identify beats that went well/poorly.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Externalizes events for objective discussion.</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="friends-card p-5">
+                    <h3 class="text-lg font-semibold">Define Product Strategy</h3>
+                    <p class="mt-1 text-sm text-neutral-700">Clarify positioning, bets, and principles.</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Taglines Blitz</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Game</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Generate rapid taglines for the product in 3 styles; vote on themes.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Reveals distinct positions and resonates with stakeholders quickly.</p>
+                        </li>
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Obvious-Nonobvious</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Exercise</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">List obvious moves, then force non-obvious opposites.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Avoids me-too strategies and highlights contrarian opportunities.</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="friends-card p-5">
+                    <h3 class="text-lg font-semibold">Run a Workshop</h3>
+                    <p class="mt-1 text-sm text-neutral-700">Design a high-energy session that produces decisions and artifacts.</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Conducted Story</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Game</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Facilitator points to people to continue one story; enforce brevity.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Keeps energy high and voices balanced while converging on narrative.</p>
+                        </li>
+                        <li class="rounded-lg border border-neutral-200 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Constraints Ladder</span>
+                                <span class="text-xs uppercase tracking-wide text-neutral-500">Structure</span>
+                            </div>
+                            <p class="mt-1 text-sm text-neutral-700">Iteratively add constraints to improve and focus ideas.</p>
+                            <p class="mt-1 text-xs text-neutral-500">Why it helps: Moves group from divergence to convergence cleanly.</p>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <div id="about" class="page">
+        <section class="mx-auto max-w-3xl px-4 py-10">
+            <h2 class="friends-title text-2xl">About</h2>
+            <p class="mt-2 text-neutral-700">
+                This site aligns proven improv practices—like Yes, And; Status work; and
+                rapid ideation games—with practical product management outcomes such as stakeholder
+                alignment, backlog management, and roadmap creation.
+            </p>
+            <p class="mt-3 text-neutral-700">
+                Use it to facilitate workshops, unblock teams, and make collaboration more playful and effective.
+            </p>
+        </section>
+    </div>
+
+    <footer class="mx-auto max-w-4xl px-4 pb-10 text-xs text-neutral-500">Made with improv ✶</footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        function handleHash() {
+            const hash = window.location.hash || '#/';
+            if (hash === '#/' || hash === '#') {
+                showPage('home');
+            } else if (hash === '#/outcomes') {
+                showPage('outcomes');
+            } else if (hash === '#/about') {
+                showPage('about');
+            }
+        }
+
+        window.addEventListener('hashchange', handleHash);
+        handleHash();
+    </script>
+</body>
+</html>

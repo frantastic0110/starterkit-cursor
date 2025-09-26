@@ -7,3 +7,62 @@
 .btn {
   @apply rounded-2xl border border-neutral-300 bg-white px-4 py-2 shadow-sm hover:shadow-md;
 }
+
+/* Friends-inspired theme */
+:root {
+  --friends-yellow: #f6d64a;
+  --friends-blue: #4a84f6;
+  --friends-red: #e95555;
+  --friends-green: #51b36b;
+  --friends-purple: #7a5aa6;
+  --friends-bg: #faf7f2;
+}
+
+body {
+  background: var(--friends-bg);
+  font-family: 'Cabin', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.friends-title {
+  font-family: 'Poppins', 'Cabin', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.friends-dots span {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  margin: 0 0.35rem;
+}
+
+.dot-yellow { background: var(--friends-yellow); }
+.dot-blue { background: var(--friends-blue); }
+.dot-red { background: var(--friends-red); }
+.dot-green { background: var(--friends-green); }
+.dot-purple { background: var(--friends-purple); }
+
+.friends-card {
+  @apply rounded-2xl border border-neutral-200 bg-white shadow-sm;
+}
+
+.friends-link {
+  @apply text-neutral-800 underline decoration-dotted underline-offset-4 hover:text-neutral-950;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
