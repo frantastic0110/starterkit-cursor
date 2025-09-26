@@ -8,19 +8,41 @@
   @apply rounded-2xl border border-neutral-300 bg-white px-4 py-2 shadow-sm hover:shadow-md;
 }
 
-/* Friends-inspired theme */
+/* Comedy Club theme */
 :root {
-  --friends-yellow: #f6d64a;
-  --friends-blue: #4a84f6;
-  --friends-red: #e95555;
-  --friends-green: #51b36b;
-  --friends-purple: #7a5aa6;
-  --friends-bg: #faf7f2;
+  --comedy-yellow: #f6d64a;
+  --comedy-blue: #4a84f6;
+  --comedy-red: #e95555;
+  --comedy-green: #51b36b;
+  --comedy-purple: #7a5aa6;
+  --comedy-bg: #faf7f2;
+  --brick-red: #c53030;
+  --brick-light: #fed7d7;
+  --brick-dark: #9b2c2c;
+  --spotlight: #fef3c7;
 }
 
 body {
-  background: var(--friends-bg);
+  background: var(--comedy-bg);
   font-family: 'Cabin', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Comedy Club Brick Wall Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 25%, var(--brick-light) 25%, var(--brick-light) 50%, transparent 50%, transparent 75%, var(--brick-light) 75%),
+    linear-gradient(-45deg, transparent 25%, var(--brick-light) 25%, var(--brick-light) 50%, transparent 50%, transparent 75%, var(--brick-light) 75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  opacity: 0.03;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .friends-title {
@@ -37,14 +59,27 @@ body {
   margin: 0 0.35rem;
 }
 
-.dot-yellow { background: var(--friends-yellow); }
-.dot-blue { background: var(--friends-blue); }
-.dot-red { background: var(--friends-red); }
-.dot-green { background: var(--friends-green); }
-.dot-purple { background: var(--friends-purple); }
+.dot-yellow { background: var(--comedy-yellow); }
+.dot-blue { background: var(--comedy-blue); }
+.dot-red { background: var(--comedy-red); }
+.dot-green { background: var(--comedy-green); }
+.dot-purple { background: var(--comedy-purple); }
 
 .friends-card {
   @apply rounded-2xl border border-neutral-200 bg-white shadow-sm;
+  position: relative;
+  overflow: hidden;
+}
+
+.friends-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--comedy-yellow), var(--comedy-blue), var(--comedy-red), var(--comedy-green), var(--comedy-purple));
+  opacity: 0.8;
 }
 
 .friends-link {
@@ -65,4 +100,36 @@ body {
 
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out;
+}
+
+/* Comedy Club Header Styling */
+.comedy-header {
+  background: white;
+  border-bottom: 3px solid var(--brick-red);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comedy-header::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brick-red), transparent);
+}
+
+/* Comedy Club Button Styling */
+.comedy-btn {
+  @apply rounded-2xl border border-neutral-300 bg-white px-4 py-2 shadow-sm hover:shadow-md;
+  background: linear-gradient(135deg, var(--spotlight) 0%, white 100%);
+  border: 2px solid var(--brick-light);
+  transition: all 0.3s ease;
+}
+
+.comedy-btn:hover {
+  background: linear-gradient(135deg, var(--comedy-yellow) 0%, var(--spotlight) 100%);
+  border-color: var(--brick-red);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 48, 48, 0.2);
 }

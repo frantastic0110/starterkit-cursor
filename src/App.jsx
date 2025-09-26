@@ -11,7 +11,7 @@ function Link({ to, children }) {
 
 function Header() {
   return (
-    <header className="border-b border-neutral-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="comedy-header relative">
       <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
         <a href="#/" className="flex items-center gap-3">
           <div className="friends-title text-2xl tracking-widest">IMPROV</div>
@@ -25,9 +25,7 @@ function Header() {
           <div className="friends-title text-2xl tracking-widest">PM</div>
         </a>
         <nav className="flex gap-6 text-sm">
-          <Link to="/outcomes">Outcomes</Link>
-          <Link to="/about">About</Link>
-          <a href="https://" target="_blank" rel="noreferrer" className="friends-link hidden sm:inline">Share</a>
+          <Link to="/outcomes">Games</Link>
         </nav>
       </div>
     </header>
@@ -36,16 +34,118 @@ function Header() {
 
 function Home() {
   return (
-    <section className="mx-auto max-w-4xl px-4 py-10">
-      <div className="friends-card p-6">
-        <h1 className="friends-title text-3xl">Improv for Product Managers</h1>
-        <p className="mt-2 text-neutral-700">
-          Use classic improv games and rules to facilitate key product management outcomes.
-        </p>
-        <div className="mt-6 flex gap-3">
-          <a href="#/outcomes" className="btn">Explore Outcomes</a>
-          <a href="#/about" className="btn">About</a>
+    <section className="mx-auto max-w-6xl px-4 py-10">
+      {/* Hero Section */}
+      <div className="friends-card p-8 mb-8 text-center">
+        <div className="friends-dots mb-6" aria-hidden="true">
+          <span className="dot-red"></span>
+          <span className="dot-yellow"></span>
+          <span className="dot-blue"></span>
+          <span className="dot-green"></span>
+          <span className="dot-purple"></span>
         </div>
+        <h1 className="friends-title text-4xl mb-4">Why Improv for Product Managers?</h1>
+        <p className="text-xl text-neutral-700 max-w-3xl mx-auto">
+          Product management is fundamentally about <strong>collaboration, creativity, and communication</strong>—the same skills that make great improvisers. 
+          When you master improv techniques, you become a more effective product leader.
+        </p>
+      </div>
+
+      {/* Benefits Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="friends-card p-6">
+          <div className="text-3xl mb-3">🎭</div>
+          <h3 className="text-lg font-semibold mb-2">Build Psychological Safety</h3>
+          <p className="text-sm text-neutral-700">
+            Improv games like "Yes, And" create environments where teams feel safe to share bold ideas and take creative risks.
+          </p>
+        </div>
+        
+        <div className="friends-card p-6">
+          <div className="text-3xl mb-3">🎯</div>
+          <h3 className="text-lg font-semibold mb-2">Improve Stakeholder Alignment</h3>
+          <p className="text-sm text-neutral-700">
+            Status exercises and active listening games help you navigate complex power dynamics and build genuine rapport.
+          </p>
+        </div>
+        
+        <div className="friends-card p-6">
+          <div className="text-3xl mb-3">🚀</div>
+          <h3 className="text-lg font-semibold mb-2">Accelerate Decision Making</h3>
+          <p className="text-sm text-neutral-700">
+            Rapid ideation and constraint-based thinking help teams converge on solutions faster and with more confidence.
+          </p>
+        </div>
+        
+        <div className="friends-card p-6">
+          <div className="text-3xl mb-3">💡</div>
+          <h3 className="text-lg font-semibold mb-2">Unlock Creative Solutions</h3>
+          <p className="text-sm text-neutral-700">
+            Story-based exercises and character work reveal user needs and inspire innovative approaches to product challenges.
+          </p>
+        </div>
+        
+        <div className="friends-card p-6">
+          <div className="text-3xl mb-3">🤝</div>
+          <h3 className="text-lg font-semibold mb-2">Strengthen Team Dynamics</h3>
+          <p className="text-sm text-neutral-700">
+            Collaborative games build trust, improve communication, and create more resilient, adaptive teams.
+          </p>
+        </div>
+        
+        <div className="friends-card p-6">
+          <div className="text-3xl mb-3">⚡</div>
+          <h3 className="text-lg font-semibold mb-2">Energize Workshops</h3>
+          <p className="text-sm text-neutral-700">
+            Interactive exercises keep participants engaged, maintain energy levels, and produce better outcomes from meetings.
+          </p>
+        </div>
+      </div>
+
+      {/* How It Works */}
+      <div className="friends-card p-8">
+        <h2 className="friends-title text-2xl mb-4">How It Works</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="text-center">
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span className="text-blue-600 font-bold">1</span>
+            </div>
+            <h3 className="font-semibold mb-2">Choose Your Outcome</h3>
+            <p className="text-sm text-neutral-700">
+              Pick a product management challenge you're facing—from stakeholder management to roadmap creation.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span className="text-green-600 font-bold">2</span>
+            </div>
+            <h3 className="font-semibold mb-2">Select Your Game</h3>
+            <p className="text-sm text-neutral-700">
+              Find improv exercises that match your team size, time constraints, and comfort level with the material.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span className="text-purple-600 font-bold">3</span>
+            </div>
+            <h3 className="font-semibold mb-2">Facilitate & Learn</h3>
+            <p className="text-sm text-neutral-700">
+              Use the detailed instructions to run engaging workshops that produce real results and build team skills.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="text-center mt-8">
+        <p className="text-lg text-neutral-700 mb-4">
+          Ready to transform your product management practice?
+        </p>
+        <a href="#/outcomes" className="comedy-btn text-lg px-8 py-3">
+          Explore the Games →
+        </a>
       </div>
     </section>
   )
@@ -88,7 +188,7 @@ function Outcomes() {
 
   return (
     <section className="mx-auto max-w-4xl px-4 py-10">
-      <h2 className="friends-title text-2xl">Outcomes ↔ Improv</h2>
+      <h2 className="friends-title text-2xl">Games ↔ Improv</h2>
       <p className="mt-2 text-neutral-700">Browse core PM deliverables and the improv tools that help.</p>
 
       {/* Search and Filter Controls */}
@@ -187,9 +287,9 @@ function Outcomes() {
             {expandedCards.has(outcome.id) && (
               <div className="mt-4 space-y-2 animate-fadeIn">
                 {outcome.improv.map((game) => (
-                  <div key={game.name} className="rounded-lg border border-neutral-200 p-3 hover:border-blue-300 transition-colors">
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium">{game.name}</span>
+                  <div key={game.name} className="rounded-lg border border-neutral-200 p-4 hover:border-blue-300 transition-colors">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="font-medium text-lg">{game.name}</span>
                       <div className="flex items-center gap-2">
                         <span className="text-xs uppercase tracking-wide text-neutral-500 bg-neutral-100 px-2 py-1 rounded">
                           {game.type}
@@ -211,10 +311,29 @@ function Outcomes() {
                         </div>
                       </div>
                     </div>
-                    <p className="mt-1 text-sm text-neutral-700">{game.how}</p>
-                    <p className="mt-1 text-xs text-neutral-500">
-                      <strong>Why it helps:</strong> {game.why}
-                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                      <div className="flex items-center gap-2 text-sm">
+                        <span className="text-neutral-500">⏱️</span>
+                        <span className="font-medium">{game.time}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <span className="text-neutral-500">👥</span>
+                        <span className="font-medium">{game.participants}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <p className="text-sm text-neutral-700">
+                        <strong>How:</strong> {game.how}
+                      </p>
+                      <p className="text-sm text-neutral-700">
+                        <strong>Instructions:</strong> {game.instructions}
+                      </p>
+                      <p className="text-xs text-neutral-500">
+                        <strong>Why it helps:</strong> {game.why}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -242,21 +361,6 @@ function Outcomes() {
   )
 }
 
-function About() {
-  return (
-    <section className="mx-auto max-w-3xl px-4 py-10">
-      <h2 className="friends-title text-2xl">About</h2>
-      <p className="mt-2 text-neutral-700">
-        This site aligns proven improv practices—like Yes, And; Status work; and
-        rapid ideation games—with practical product management outcomes such as stakeholder
-        alignment, backlog management, and roadmap creation.
-      </p>
-      <p className="mt-3 text-neutral-700">
-        Use it to facilitate workshops, unblock teams, and make collaboration more playful and effective.
-      </p>
-    </section>
-  )
-}
 
 function Router() {
   const [hash, setHash] = React.useState(window.location.hash || '#/')
@@ -267,7 +371,6 @@ function Router() {
   }, [])
 
   let Page = Home
-  if (hash.startsWith('#/about')) Page = About
   if (hash.startsWith('#/outcomes')) Page = Outcomes
 
   return (
